@@ -1,0 +1,71 @@
+/*
+ * Gojo Violet Nebula — wallpaper layer.
+ *
+ * Applied through the plugin's own <style> element, so it is removed again when
+ * the plugin is disabled. The wallpaper is one fixed image behind the app shell;
+ * the shell's opaque canvas columns are made transparent and the sidebar becomes
+ * frosted glass so the artwork shows through without hurting legibility.
+ */
+
+body {
+  background-color: #0b0715 !important;
+  background-image:
+    radial-gradient(900px 620px at 16% 8%, rgba(168, 85, 247, 0.26), rgba(168, 85, 247, 0) 62%),
+    radial-gradient(820px 600px at 86% 92%, rgba(236, 72, 153, 0.20), rgba(236, 72, 153, 0) 62%),
+    linear-gradient(180deg, rgba(7, 4, 13, 0.92) 0%, rgba(7, 4, 13, 0.78) 34%, rgba(7, 4, 13, 0.88) 100%),
+    url("__WALLPAPER_URL__");
+  background-size: auto, auto, auto, cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed, fixed, fixed, fixed;
+}
+
+/* Light appearance: the same artwork washed out to a pale lavender paper. */
+body:not([data-ds-dark-theme]) {
+  background-color: #f6f1ff !important;
+  background-image:
+    radial-gradient(900px 620px at 16% 8%, rgba(192, 132, 252, 0.34), rgba(192, 132, 252, 0) 62%),
+    radial-gradient(820px 600px at 86% 92%, rgba(244, 114, 182, 0.24), rgba(244, 114, 182, 0) 62%),
+    linear-gradient(180deg, rgba(251, 247, 255, 0.95) 0%, rgba(251, 247, 255, 0.90) 40%, rgba(246, 240, 255, 0.93) 100%),
+    url("__WALLPAPER_URL__");
+}
+
+/* The app shell keeps its opaque canvas on top of the body; make the canvas
+ * columns transparent so the fixed wallpaper stays visible. */
+.mP3x-q_frame,
+.mP3x-q_centerCol,
+.mP3x-q_bottomRow,
+[data-platform='darwin'] .mP3x-q_frame,
+[data-platform='darwin'] .mP3x-q_centerCol,
+[data-platform='darwin'] .mP3x-q_rightbarCol {
+  background: transparent !important;
+}
+
+/* The conversation column paints the canvas itself; let the artwork through. */
+.an3WzG_root {
+  background: transparent !important;
+}
+
+/* Keep the composer readable without hiding the artwork behind it. */
+.an3WzG_composerSeat {
+  background: linear-gradient(180deg, rgba(11, 7, 21, 0), color-mix(in srgb, var(--dsw-alias-bg-base) 88%, transparent) 36px) !important;
+}
+
+body:not([data-ds-dark-theme]) .an3WzG_composerSeat {
+  background: linear-gradient(180deg, rgba(246, 241, 255, 0), color-mix(in srgb, var(--dsw-alias-bg-base) 88%, transparent) 36px) !important;
+}
+
+
+/* The sidebar keeps its own solid violet fill (--dsw-specific-sidebar-fill).
+ * Do not glass it: a backdrop-filter on the sidebar column would become the
+ * containing block of the fixed-position sidebar toggle buttons rendered inside
+ * the collapsed sidebar, which hides the open/close controls. */
+
+@media (prefers-reduced-transparency: reduce) {
+  body,
+  body:not([data-ds-dark-theme]) {
+    background-image: none !important;
+    background-color: var(--dsw-alias-bg-base) !important;
+  }
+}
+

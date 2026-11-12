@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Agent artifacts: claim sidecars, claim audit, logs
+.agents/
+*.dshclaim
+.dsh-file-claim*
+*.log
+
+# Live-GUI verification screenshots: they contain session content
+_verify/
+
+# Wallpaper build intermediate; the shipped asset in assets/ is committed
+_build/wallpaper-raw.jpg
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/

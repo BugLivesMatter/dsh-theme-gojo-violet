@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Gojo violet nebula">
+  <defs>
+    <linearGradient id="ring" x1="6" y1="4" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f0abfc"/>
+      <stop offset=".45" stop-color="#a855f7"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".55">
+      <stop offset="0" stop-color="#c084fc" stop-opacity=".85"/>
+      <stop offset=".55" stop-color="#7c3aed" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#2e1065" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="#120c20"/>
+  <rect x=".5" y=".5" width="63" height="63" rx="14.5" fill="none" stroke="#c4b5fd" stroke-opacity=".18"/>
+  <circle cx="32" cy="32" r="24" fill="url(#glow)"/>
+  <path d="M12 32c5.2-8.3 12-12.5 20-12.5S46.8 23.7 52 32c-5.2 8.3-12 12.5-20 12.5S17.2 40.3 12 32Z" fill="#0b0715" stroke="url(#ring)" stroke-width="2.6" stroke-linejoin="round"/>
+  <ellipse cx="32" cy="32" rx="5.4" ry="9.4" fill="#0b0715" stroke="url(#ring)" stroke-width="2"/>
+  <ellipse cx="32" cy="32" rx="2.1" ry="6.2" fill="url(#ring)"/>
+  <circle cx="27.6" cy="27.4" r="1.5" fill="#fdfaff"/>
+</svg>

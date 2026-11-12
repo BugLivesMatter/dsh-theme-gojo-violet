@@ -1,0 +1,5 @@
+# Gojo Violet Nebula theme bundle.
+# Registered as a local bundle: install with plugin_manager install_bundle.
+- insert:
+    - id: theme-gojo-violet
+      name: '@local/theme-gojo-violet'

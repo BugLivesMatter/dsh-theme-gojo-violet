@@ -1,0 +1,7 @@
+# Keep the repository LF-only; the wallpaper is binary.
+* text=auto eol=lf
+
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.svg text eol=lf

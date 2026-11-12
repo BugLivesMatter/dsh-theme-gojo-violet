@@ -1,0 +1,58 @@
+{
+  "name": "@local/theme-gojo-violet",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gojo Violet Nebula theme for the DeepSeek Harness Web client",
+  "license": "MIT",
+  "author": "BugLivesMatter",
+  "homepage": "https://github.com/BugLivesMatter/dsh-theme-gojo-violet#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BugLivesMatter/dsh-theme-gojo-violet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BugLivesMatter/dsh-theme-gojo-violet/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "theme",
+    "wallpaper",
+    "design-tokens"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./assets/*": "./assets/*"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "assets/*.jpg",
+    "LICENSE",
+    "README.md",
+    "README.ru.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-theme"
+      ]
+    }
+  }
+}

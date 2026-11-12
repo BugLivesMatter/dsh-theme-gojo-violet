@@ -1,0 +1,24 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: bundle checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Syntax check
+        run: node --check index.js && node --check client.js
+      - name: Smoke test
+        run: node _build/smoke-test.mjs
+      - name: Contrast report
+        run: node _build/contrast.mjs
