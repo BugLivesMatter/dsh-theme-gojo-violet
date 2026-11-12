@@ -125,4 +125,5 @@ node _build/contrast.mjs
 ## License
 
 Code: MIT — see [LICENSE](./LICENSE). Artwork: author's own, all rights
-reserved, not part of the MIT grant. Русская версия: [README.ru.md](./README.ru.md).
+reserved, not part of the MIT grant — see [ARTWORK.md](./ARTWORK.md).
+Русская версия: [README.ru.md](./README.ru.md).

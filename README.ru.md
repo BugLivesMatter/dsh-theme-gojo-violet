@@ -122,4 +122,5 @@ node _build/contrast.mjs
 ## Лицензия
 
 Код: MIT — см. [LICENSE](./LICENSE). Арт: файл автора, все права сохранены, в
-грант MIT не входит. English version: [README.md](./README.md).
+грант MIT не входит — см. [ARTWORK.md](./ARTWORK.md). English version:
+[README.md](./README.md).

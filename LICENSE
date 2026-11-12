@@ -19,11 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-Except as noted here, the MIT grant above covers the source code of this
-repository only. The artwork (gojo-source.jpg and the wallpaper derived from
-it) is the author's own file, is included so a fresh clone renders correctly,
-and is NOT licensed for redistribution by third parties. Replace the source
-image if you republish the theme.
